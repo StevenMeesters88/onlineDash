@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load datagateway_template_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>show_data</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+
+<h2>Variabler i detta dataset</h2>
+{% for col in columns %}
+    <div style="margin-left: 2%;">
+        {{ col }}<br>
+    </div>
+
+<!--    <div>
+        <input type="checkbox" id="scales" name="display_type" value="locationbox" checked />
+        <label for="scales">{{ col }}</label>
+    </div>
+-->
+
+{% endfor %}
+<br>
+<button style="margin-left: 2%;" type="submit" onclick="location.href='{% url 'build_dash' %}'">Continue</button>
+
+<div>
+    <h2>Dataset</h2>
+    <table>
+        <thead>
+            {{ data | convert_data_frame_to_html_table_headers | safe }}
+         </thead>
+         <tbody>
+            {{ data | convert_data_frame_to_html_table_rows | safe }}
+         </tbody>
+    </table>
+</div>
+
+</body>
+</html>

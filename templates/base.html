@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="center_blue">Hello world!</h1>
+    </header>
+
+    <div class="center">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Skicka</button>
+        </form>
+    </div>
+
+</body>
+</html>

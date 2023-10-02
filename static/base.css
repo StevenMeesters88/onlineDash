@@ -1,0 +1,56 @@
+
+.center {
+    text-align: center;
+}
+
+.center_blue {
+    text-align: center;
+    color: blue;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+
+
+p,
+label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+
+
+
+
+
+
+html {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
